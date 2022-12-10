@@ -63,37 +63,7 @@ int main(int argc, char **argv)
     // Subtract two polynomial linked list
     PolynomialLinkedList *polynomialLinkedList4 = subtractPolynomialLinkedList(polynomialLinkedList1, polynomialLinkedList2);
     printPolynomialLinkedList(polynomialLinkedList4);
-
-
-    // /**
-    //  * @brief Multiply two Polynomial Linked List object
-    //  * 
-    //  * @param polynomialLinkedList1
-    //  * @param polynomialLinkedList2
-    //  * 
-    //  * @return PolynomialLinkedList* 
-    //  */
-    // PolynomialLinkedList *multiplyPolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2);
-
-    // /**
-    //  * @brief Divide two Polynomial Linked List object
-    //  * 
-    //  * @param polynomialLinkedList1
-    //  * @param polynomialLinkedList2
-    //  * 
-    //  * @return PolynomialLinkedList* 
-    //  */
-    // PolynomialLinkedList *dividePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2);
-
-    // /**
-    //  * @brief Evaluate a Polynomial Linked List object
-    //  * 
-    //  * @param polynomialLinkedList 
-    //  * @param x 
-    //  * @return float 
-    //  */
-    // float evaluatePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList, int x);
-
+    
     // Multiply two polynomial linked list
     PolynomialLinkedList *polynomialLinkedList5 = multiplyPolynomialLinkedList(polynomialLinkedList1, polynomialLinkedList2);
     printPolynomialLinkedList(polynomialLinkedList5);
