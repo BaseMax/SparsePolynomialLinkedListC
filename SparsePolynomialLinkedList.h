@@ -10,9 +10,9 @@ typedef struct {
     int exponent;
 } Term;
 
-typedef struct Node {
+typedef struct PolynomialLinkedList {
     Term term;
-    struct Node *next;
+    struct PolynomialLinkedList *next;
 } PolynomialLinkedList;
 
 PolynomialLinkedList *createPolynomialLinkedList();
