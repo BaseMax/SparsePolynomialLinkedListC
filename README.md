@@ -1,6 +1,6 @@
 # Sparse Polynomial Linked-List C
 
-This is a C implementation of a sparse polynomial linked-list. This is a good example of how to use a linked-list in C. By using a linked-list, we can store a sparse polynomial in a memory efficient way.
+This is a C implementation of a sparse polynomial linked-list. This is a good example of how to use a linked-list in C. By using a linked-list, we can store a sparse polynomial in a memory efficient way. Sparse polynomials are polynomials that have a lot of terms with a coefficient of 0. For example, the polynomial `2x^3 + 3x^2 + 4x + 5` has 4 terms, but only 2 of them have a non-zero coefficient. This means that we can store this polynomial in a linked-list with only 2 nodes. This is a lot more memory efficient than storing the polynomial in an array.
 
 ## Structure
 
