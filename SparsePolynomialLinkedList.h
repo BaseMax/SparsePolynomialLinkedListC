@@ -62,4 +62,34 @@ PolynomialLinkedList *addPolynomialLinkedList(PolynomialLinkedList *polynomialLi
  */
 PolynomialLinkedList *subtractPolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2);
 
+
+/**
+ * @brief Multiply two Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList1
+ * @param polynomialLinkedList2
+ * 
+ * @return PolynomialLinkedList* 
+ */
+PolynomialLinkedList *multiplyPolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2);
+
+/**
+ * @brief Divide two Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList1
+ * @param polynomialLinkedList2
+ * 
+ * @return PolynomialLinkedList* 
+ */
+PolynomialLinkedList *dividePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2);
+
+/**
+ * @brief Evaluate a Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList 
+ * @param x 
+ * @return float 
+ */
+float evaluatePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList, int x);
+
 #endif

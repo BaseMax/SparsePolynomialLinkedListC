@@ -177,3 +177,80 @@ PolynomialLinkedList *subtractPolynomialLinkedList(PolynomialLinkedList *polynom
     }
     return polynomialLinkedList;
 }
+
+/**
+ * @brief Multiply two Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList1
+ * @param polynomialLinkedList2
+ * 
+ * @return PolynomialLinkedList* 
+ */
+PolynomialLinkedList *multiplyPolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2)
+{
+    PolynomialLinkedList *polynomialLinkedList = createPolynomialLinkedList();
+    PolynomialLinkedList *current1 = polynomialLinkedList1->next;
+    PolynomialLinkedList *current2 = polynomialLinkedList2->next;
+    while (current1 != NULL)
+    {
+        while (current2 != NULL)
+        {
+            Term term;
+            term.coefficient = current1->term.coefficient * current2->term.coefficient;
+            term.exponent = current1->term.exponent + current2->term.exponent;
+            addTerm(polynomialLinkedList, term);
+            current2 = current2->next;
+        }
+        current1 = current1->next;
+        current2 = polynomialLinkedList2->next;
+    }
+    return polynomialLinkedList;
+}
+
+/**
+ * @brief Divide two Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList1
+ * @param polynomialLinkedList2
+ * 
+ * @return PolynomialLinkedList* 
+ */
+PolynomialLinkedList *dividePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList1, PolynomialLinkedList *polynomialLinkedList2)
+{
+    PolynomialLinkedList *polynomialLinkedList = createPolynomialLinkedList();
+    PolynomialLinkedList *current1 = polynomialLinkedList1->next;
+    PolynomialLinkedList *current2 = polynomialLinkedList2->next;
+    while (current1 != NULL)
+    {
+        while (current2 != NULL)
+        {
+            Term term;
+            term.coefficient = current1->term.coefficient / current2->term.coefficient;
+            term.exponent = current1->term.exponent - current2->term.exponent;
+            addTerm(polynomialLinkedList, term);
+            current2 = current2->next;
+        }
+        current1 = current1->next;
+        current2 = polynomialLinkedList2->next;
+    }
+    return polynomialLinkedList;
+}
+
+/**
+ * @brief Evaluate a Polynomial Linked List object
+ * 
+ * @param polynomialLinkedList 
+ * @param x 
+ * @return float 
+ */
+float evaluatePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList, int x)
+{
+    float result = 0;
+    PolynomialLinkedList *current = polynomialLinkedList->next;
+    while (current != NULL)
+    {
+        result += current->term.coefficient * pow(x, current->term.exponent);
+        current = current->next;
+    }
+    return result;
+}
