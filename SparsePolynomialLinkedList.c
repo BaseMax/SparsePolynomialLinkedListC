@@ -259,10 +259,12 @@ float evaluatePolynomialLinkedList(PolynomialLinkedList *polynomialLinkedList, i
 {
     float result = 0;
     PolynomialLinkedList *current = polynomialLinkedList->next;
+
     while (current != NULL)
     {
         result += current->term.coefficient * pow(x, current->term.exponent);
         current = current->next;
     }
+
     return result;
 }
