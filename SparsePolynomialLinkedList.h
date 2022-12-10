@@ -1,9 +1,10 @@
 #ifndef _SPARSE_POLYNOMIAL_LINKED_LIST_H
 #define _SPARSE_POLYNOMIAL_LINKED_LIST_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include <math.h> // pow
+#include <stdio.h> // printf
+#include <stdlib.h> // malloc, free
+#include <stdbool.h> // bool
 
 typedef struct {
     int coefficient;
@@ -21,6 +22,15 @@ typedef struct PolynomialLinkedList {
  * @return PolynomialLinkedList* 
  */
 PolynomialLinkedList *createPolynomialLinkedList();
+
+/**
+ * @brief Check if a Polynomial Linked List is empty
+ * 
+ * @param polynomialLinkedList
+ * 
+ * @return bool 
+ */
+bool isEmpty(PolynomialLinkedList *polynomialLinkedList);
 
 /**
  * @brief Add a Term object

@@ -24,6 +24,18 @@ PolynomialLinkedList *createPolynomialLinkedList()
 }
 
 /**
+ * @brief Check if a Polynomial Linked List is empty
+ * 
+ * @param polynomialLinkedList
+ * 
+ * @return bool 
+ */
+bool isEmpty(PolynomialLinkedList *polynomialLinkedList)
+{
+    return polynomialLinkedList->next == NULL;
+}
+
+/**
  * @brief Add a Term object
  * 
  * @param polynomialLinkedList 
